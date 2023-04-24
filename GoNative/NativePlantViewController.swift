@@ -70,7 +70,7 @@ class NativePlantViewController: UIViewController, UITableViewDataSource, UISear
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        //scroll bug fixed
+        //scroll bug fixed 
         if(scrollView.contentOffset.y != tableViewContentOffset.y){
             tableViewContentOffset = scrollView.contentOffset
         }
