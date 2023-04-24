@@ -69,9 +69,12 @@ class NativePlantViewController: UIViewController, UITableViewDataSource, UISear
     var tableViewContentOffset = CGPoint()
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y < tableViewContentOffset.y {
-            scrollView.contentOffset = tableViewContentOffset
+        
+        //scroll bug fixed
+        if(scrollView.contentOffset.y != tableViewContentOffset.y){
+            tableViewContentOffset = scrollView.contentOffset
         }
+        
     }
 
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
